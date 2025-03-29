@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import { FiChevronLeft, FiChevronRight, FiMaximize, FiDownload } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight, FiDownload } from "react-icons/fi";
 
 // Define the type for the props
 interface ProductImageCarouselProps {
@@ -125,11 +125,14 @@ const ProductImageCarousel = ({ images }: ProductImageCarouselProps) => {
               className={`relative flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden ${currentIndex === index ? "ring-2 ring-blue-500" : "ring-1 ring-gray-200"}`}
               aria-label={`View image ${index + 1}`}
             >
-              <img
+              <Image
                 src={imageUrl}
                 alt={`Thumbnail ${index + 1}`}
                 className="w-full h-full object-cover"
                 loading="lazy"
+                priority={true}
+                width={300}
+                height={300}
               />
             </button>
           ))}

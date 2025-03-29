@@ -1,5 +1,4 @@
 import ProductList from "@/components/shared/product/product-list";
-import { Button } from "@/components/ui/button";
 import getLatestProducts from "@/lib/actions/productActions";
 
 

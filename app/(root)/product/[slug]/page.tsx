@@ -1,6 +1,5 @@
 import { getProductBySlug } from '@/lib/actions/productActions';
 import { notFound } from 'next/navigation';
-import React from 'react'
 import {Badge} from '@/components/ui/badge'
 import {Button} from '@/components/ui/button'
 import {Card,CardContent} from '@/components/ui/card'
@@ -57,6 +56,8 @@ const ProductDetailsPage = async({params}:{params:Promise<{slug:string}>}) => {
                             <Badge variant={'outline'}>In Stock</Badge>
                         ):(<Badge>Out of Stock</Badge>) }</div>
                     </div>
+                    {/* Button */}
+                    <Button>Add to Cart</Button>
                 </CardContent>
 
             </Card>
